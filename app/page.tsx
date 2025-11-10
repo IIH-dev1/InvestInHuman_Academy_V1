@@ -9,11 +9,8 @@ import { GraduationCap, Send, Award, Languages, Users, BookOpen, Globe, MessageS
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ContactModal from "@/components/contact-modal"
-import AnnouncementsCarousel from "@/components/announcements-carousel"
 import { SectionReveal } from "@/components/section-reveal"
 import { useTranslation } from "@/lib/useTranslation"
-import { apiRequest } from "@/lib/api"
-import { fetchActiveAnnouncements, AnnouncementData } from "@/lib/announcementUtils"
 import { getSeminars, Seminar } from "@/lib/seminar-utils"
 import { useState, useEffect } from "react"
 
@@ -21,15 +18,11 @@ export default function HomePage() {
   const t = useTranslation();
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [contactContext, setContactContext] = useState<'general' | 'partnership'>('general');
-  const [announcements, setAnnouncements] = useState<AnnouncementData[]>([]);
-  const [announcementsLoading, setAnnouncementsLoading] = useState(true);
   const [seminars, setSeminars] = useState<Seminar[]>([]);
   const [languageCourses, setLanguageCourses] = useState<any[]>([]);
 
   useEffect(() => {
-    fetchAnnouncementsData();
     fetchSeminarsData();
-    fetchLanguageCourses();
   }, []);
 
   const fetchSeminarsData = async () => {
@@ -38,31 +31,6 @@ export default function HomePage() {
       setSeminars(allSeminars.slice(0, 3));
     } catch (error) {
       console.error("Error fetching seminars:", error);
-    }
-  };
-
-  const fetchAnnouncementsData = async () => {
-    try {
-      const activeAnnouncements = await fetchActiveAnnouncements();
-      setAnnouncements(activeAnnouncements);
-    } catch (error) {
-      console.error("Error fetching announcements:", error);
-    } finally {
-      setAnnouncementsLoading(false);
-    }
-  };
-
-  const fetchLanguageCourses = async () => {
-    try {
-      const response = await apiRequest('/api/admin/content/language-courses');
-      if (response.ok) {
-        const result = await response.json();
-        // Extract data from the response wrapper
-        const courses = result.data || [];
-        setLanguageCourses(courses.slice(0, 3));
-      }
-    } catch (error) {
-      console.error('Error fetching language courses:', error);
     }
   };
 
@@ -193,13 +161,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {!announcementsLoading && announcements.length > 0 && (
-        <section className="py-12 bg-gradient-to-r from-amber-50 to-orange-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <AnnouncementsCarousel announcements={announcements} autoSlide={true} autoSlideInterval={6000} showArrows={true} showDots={true} />
-          </div>
-        </section>
-      )}
       {/* Overview of All Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -377,50 +338,6 @@ export default function HomePage() {
           <div className="text-center">
             <Link href="/seminars">
               <Button size="lg" variant="outline" className="border-2 border-amber-500 text-amber-700 hover:bg-amber-50">{t("view_all_seminars") || "View All Seminars"}</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">{t("academy_language_courses_title") || "Language Courses"}</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("language_courses_subtitle") || "Master German with expert instruction"}</p>
-            </div>
-          </SectionReveal>
-          {languageCourses.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {languageCourses.map((course, index) => (
-                <SectionReveal key={course.id} delay={0.1 + index * 0.1}>
-                  <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-amber-500 transform hover:scale-105">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <BookOpen className="h-12 w-12 text-amber-500 mb-4" />
-                        <Badge className="bg-amber-100 text-amber-800">{course.level || "All Levels"}</Badge>
-                      </div>
-                      <CardTitle className="text-xl">{course.title || "German Course"}</CardTitle>
-                      <CardDescription>{course.description || "Language training program"}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      {course.professor_name && (
-                        <div className="flex items-center space-x-2 text-sm">
-                          <Users className="h-4 w-4 text-gray-500" />
-                          <span>{t("academy_professor") || "Instructor"}: {course.professor_name}</span>
-                        </div>
-                      )}
-                      <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white">{t("academy_btn_register") || "Enroll Now"}</Button>
-                    </CardContent>
-                  </Card>
-                </SectionReveal>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-8"><p className="text-gray-500">{t("no_courses") || "Courses coming soon"}</p></div>
-          )}
-          <div className="text-center">
-            <Link href="/language-courses">
-              <Button size="lg" variant="outline" className="border-2 border-amber-500 text-amber-700 hover:bg-amber-50 transform hover:scale-105 transition-all duration-300">{t("view_all_courses") || "View All Courses"}</Button>
             </Link>
           </div>
         </div>

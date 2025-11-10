@@ -1,10 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { AuthProvider } from '@/src/contexts/AuthContext'
-import { AdminAuthProvider } from '@/src/contexts/AdminAuthContext'
 import { LanguageProvider } from '@/components/language-context'
 import { Toaster } from "@/components/ui/toaster"
-import { AnalyticsInitializer } from '@/components/AnalyticsInitializer'
 
 export const metadata: Metadata = {
   title: "InvestInHuman Academy - Professional Development & Cultural Training",
@@ -38,14 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <AnalyticsInitializer />
         <LanguageProvider>
-          <AuthProvider>
-            <AdminAuthProvider>
-              {children}
-              <Toaster />
-            </AdminAuthProvider>
-          </AuthProvider>
+          {children}
+          <Toaster />
         </LanguageProvider>
       </body>
     </html>
