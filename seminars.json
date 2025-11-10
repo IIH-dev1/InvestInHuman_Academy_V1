@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "title": "Interkulturelle Kommunikation",
+    "price": 399.00,
+    "currency": "EUR",
+    "price_note": "zzgl. MwSt.",
+    "format": [
+      "Offline",
+      "Online",
+      "Inhouse",
+      "Coaching"
+    ],
+    "category": "Companies and Organizations",
+    "duration": "1 Tag (09:00 – 15:00 Uhr)",
+    "certification": "International anerkanntes Zertifikat",
+    "objectives": "Optimieren Sie Ihre Wirkung im internationalen Geschäftsleben durch kultursensibles Verhalten, interkulturelle Kompetenz und globale Etikette.",
+    "target_audience": "Führungskräfte sowie Mitarbeiter aller Branchen.",
+    "program": [
+      "Einführung: Auftrag, Ziele, Methodologie",
+      "Modul 1: Interkulturelle Kompetenz",
+      "Modul 2: Der Eisberg der Kulturen",
+      "Modul 3: Wissen über die eigene Kultur",
+      "Modul 4: Sozial- und Businessetikette",
+      "Modul 5: Deutsche Kulturstandards",
+      "Modul 6: Schwerpunktregionen (Europa, Amerika, MENA, Afrika, Asien, Lateinamerika)",
+      "Reflexion, Zertifikat und Gruppenfoto"
+    ],
+    "extras": [
+      "Fragebogen vor dem Kurs zur Personalisierung",
+      "Interaktive Workshops mit praktischen Übungen",
+      "Lehrvideo: 'Business Lunch Etiquette'",
+      "Moderierter mehrgängiger Lunch",
+      "Umfassende Arbeitsmaterialien"
+    ],
+    "dates": [
+      "2025-08-01",
+      "2025-09-15",
+      "2025-10-20"
+    ],
+    "locations": [
+      "Berlin",
+      "München",
+      "Hamburg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Internationale Soziale Etikette – Die Finishing Touch",
+    "price": 399.00,
+    "currency": "EUR",
+    "price_note": "zzgl. MwSt.",
+    "format": [
+      "Offline",
+      "Online",
+      "Inhouse",
+      "Coaching"
+    ],
+    "category": "Individuals",
+    "duration": "1 Tag (09:00 – 15:00 Uhr)",
+    "certification": "International anerkanntes Zertifikat",
+    "objectives": "Verbessern Sie Ihren sozialen Erfolg, Umgangsformen und das persönliche Auftreten im internationalen sozialen Kontext.",
+    "target_audience": "Personen, die ihr Auftreten und ihre Wirkung im internationalen und Sozialleben optimieren wollen.",
+    "program": [
+      "Einführung: Auftrag, Ziel, Methodologie",
+      "Modul 1: Internationale soziale Etikette",
+      "Modul 3: Persönliches Image und gesellschaftliche Kleiderordnung",
+      "Modul 4: Gast und Gastgeber, Tisch- und Esskultur",
+      "Modul 5: Zeitlose Korrespondenz",
+      "Modul 6: Kommunikation (Haltung, Körpersprache, Stimme, Sprache)",
+      "Modul 7: Interkulturelle Kommunikation und Etikette",
+      "Zertifikat und Gruppenfoto"
+    ],
+    "extras": [
+      "Fragebogen zur Bedarfsermittlung",
+      "Live-Demonstrationen & Rollenspiele",
+      "Lehrvideo: 'Business Lunch Etiquette'",
+      "Mehrgängiges moderiertes Mittagessen",
+      "Eleganztraining & praktische Übungen"
+    ],
+    "dates": [
+      "2025-07-25",
+      "2025-08-30",
+      "2025-10-10"
+    ],
+    "locations": [
+      "Berlin",
+      "Frankfurt",
+      "Düsseldorf"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Ladylike Special Programm",
+    "price": 399.00,
+    "currency": "EUR",
+    "price_note": "zzgl. MwSt.",
+    "format": [
+      "Offline",
+      "Online",
+      "Inhouse",
+      "Coaching"
+    ],
+    "category": "Individuals (Women)",
+    "duration": "1 Tag (14:00 – 20:00 Uhr)",
+    "certification": "International anerkanntes Zertifikat",
+    "objectives": "Stärken Sie Ihre Wirkung als kultivierte, selbstbewusste Frau im internationalen Geschäfts- und Sozialumfeld.",
+    "target_audience": "Frauen und Ladies, die ihre Präsenz und Etikette verbessern möchten.",
+    "program": [
+      "Einführung: Auftrag, Ziel, Methodologie",
+      "Modul 1: Social & Businessetikette für Frauen",
+      "Modul 2: Körpersprache und Kommunikation",
+      "Modul 3: High Heels Tutorial",
+      "Modul 4: Stil & Garderobe",
+      "Modul 5: Lady als Gast & Gastgeber",
+      "Modul 6: Tischkultur & Etikette",
+      "Modul 7: Frauen im Business",
+      "Modul 8: Korrespondenz & Social Media",
+      "Modul 9: Dating & Beziehungen",
+      "Reflexion, Zertifikat und Gruppenfoto"
+    ],
+    "extras": [
+      "Individuelle Stilberatung",
+      "Praktisches Etikette-Coaching",
+      "Business Lunch & Dinner mit Anleitung",
+      "Online-Präsenz und Social Media Check",
+      "High Heels Praxis & Körperhaltungstraining"
+    ],
+    "dates": [
+      "2025-09-05",
+      "2025-10-12",
+      "2025-11-20"
+    ],
+    "locations": [
+      "München",
+      "Hamburg",
+      "Köln"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Internationale Business & Diplomatisches Protokoll",
+    "price": 499.00,
+    "currency": "EUR",
+    "price_note": "zzgl. MwSt.",
+    "format": [
+      "Offline",
+      "Online",
+      "Inhouse",
+      "Coaching"
+    ],
+    "category": "Diplomacy & International Relations",
+    "duration": "1 Tag (09:00 – 16:00 Uhr)",
+    "certification": "International anerkanntes Zertifikat",
+    "objectives": "Stärkung diplomatischer, geschäftlicher und multikultureller Kompetenzen.",
+    "target_audience": "Diplomaten, Regierungsbeamte, PR-Berater, Eventmanager, Führungskräfte und Verwaltungsfachkräfte.",
+    "program": [
+      "Einführung: Auftrag, Ziele, Methodologie",
+      "Modul 1: Internationale Protokoll",
+      "Modul 2: Diplomatie in internationalen Angelegenheiten",
+      "Modul 3: Bilaterale & Multilaterale Events",
+      "Modul 4: Protokollarische Tisch- & Sitzordnung",
+      "Modul 5: Geschäftsessen & internationale Essetikette",
+      "Modul 6: Events Management",
+      "Modul 7: Protokoll in der Post-Covid-19-Welt",
+      "Modul 8: Interkulturelle Herausforderungen",
+      "Modul 9: Öffentliches Image & Business Branding",
+      "Reflexion, Zertifikate und Gruppenfoto"
+    ],
+    "extras": [
+      "Fragebogen zur Personalisierung",
+      "Interaktive Rollenspiele",
+      "Moderierter Business-Lunch",
+      "Lehrvideo: 'Business Lunch Etiquette'",
+      "Umfassende Materialien & Feedback"
+    ],
+    "dates": [
+      "2025-08-18",
+      "2025-09-22",
+      "2025-12-01"
+    ],
+    "locations": [
+      "Berlin",
+      "Wien",
+      "Zürich"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Invest In Human – Internationale Trainings & Coaching",
+    "price": null,
+    "currency": "EUR",
+    "price_note": "Individuell je nach Programm",
+    "format": [
+      "Offline",
+      "Online",
+      "Inhouse",
+      "Coaching",
+      "App-based"
+    ],
+    "category": "Professional Development",
+    "duration": "Flexibel: 1 bis 3 Tage oder maßgeschneidert",
+    "certification": "Teilnahmezertifikat auf Anfrage",
+    "objectives": "Förderung interkultureller Kompetenz, Führung, Diversity, Integration & Sprachentwicklung.",
+    "target_audience": "Führungskräfte, Fachkräfte, Migrant:innen, internationale Teams & Institutionen.",
+    "program": [
+      "Interkulturelle Kommunikation für Fach- und Führungskräfte",
+      "Internationale Business-Etikette & kulturelle Öffnung (1:1 Coaching)",
+      "Berufsorientierung & Bewerbungstraining für Migranten",
+      "Integration von ausländischen Fachkräften am Arbeitsplatz",
+      "Mediation & interkulturelles Konfliktmanagement",
+      "Interkulturelles Teamtraining & Diversity",
+      "Sprachtrainings (Deutsch, Englisch), Language Assessmentcenter"
+    ],
+    "extras": [
+      "Vorträge, Workshops & E-Learning",
+      "On-Demand Inhalte per App",
+      "Coaching & Beratung individuell oder in Gruppen",
+      "Partner- & Entsendevorbereitung",
+      "Ganzheitliche Betreuung für Selbstständigkeit"
+    ],
+    "dates": [
+      "2025-08-15",
+      "2025-09-30",
+      "2025-11-15"
+    ],
+    "locations": [
+      "Berlin",
+      "München",
+      "Online"
+    ]
+  }
+]
