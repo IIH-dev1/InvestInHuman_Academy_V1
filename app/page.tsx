@@ -106,10 +106,32 @@ export default function HomePage() {
               {t("academy_hero_subtitle") || "Professional Development, Cultural Training & Language Programs"}
             </p>
 
-            {/* Description */}
-            <p className="text-base md:text-lg text-white/85 max-w-3xl mx-auto drop-shadow-md animate-fade-in-delayed-more">
-              {t("hero_subtitle_2") || "Empowering global professionals through comprehensive training and education"}
-            </p>
+            {/* BVMW Badge */}
+            <div className="animate-fade-in-delayed-more">
+              <Badge className="bg-white/20 backdrop-blur-md text-white border-white/40 px-6 py-3 text-base font-semibold shadow-xl">
+                <Building2 className="h-5 w-5 mr-2 inline" />
+                {t("bvmw_badge") || "Représentation Officielle"} BVMW - {t("bvmw_network_size") || "900 000+ Entreprises"}
+              </Badge>
+            </div>
+
+            {/* Tagline */}
+            <div className="animate-fade-in-delayed-more">
+              <p className="text-lg md:text-xl font-semibold text-amber-50 italic">
+                {t("tagline_main") || "Investissez dans l'humain. Formez, connectez, inspirez."}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-4">
+              <Badge className="bg-white/15 backdrop-blur-sm text-white border-white/30 px-4 py-2 text-sm">
+                🌍 {t("core_value_openness") || "Ouverture"}
+              </Badge>
+              <Badge className="bg-white/15 backdrop-blur-sm text-white border-white/30 px-4 py-2 text-sm">
+                🤝 {t("core_value_cooperation") || "Coopération"}
+              </Badge>
+              <Badge className="bg-white/15 backdrop-blur-sm text-white border-white/30 px-4 py-2 text-sm">
+                🚀 {t("core_value_development") || "Développement humain"}
+              </Badge>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-fade-in-delayed-most">
@@ -146,27 +168,112 @@ export default function HomePage() {
                 {t("cta_contact") || "Contact Us"}
               </Button>
             </div>
-
-            {/* Trust indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 pt-12 animate-fade-in-delayed-most">
-              <div className="flex items-center gap-2 text-white/90">
-                <Users className="h-5 w-5 text-amber-100" />
-                <span className="font-semibold">500+ Students</span>
-              </div>
-              <div className="h-6 w-px bg-white/30"></div>
-              <div className="flex items-center gap-2 text-white/90">
-                <Globe className="h-5 w-5 text-amber-100" />
-                <span className="font-semibold">20+ Countries</span>
-              </div>
-              <div className="h-6 w-px bg-white/30"></div>
-              <div className="flex items-center gap-2 text-white/90">
-                <Building2 className="h-5 w-5 text-amber-100" />
-                <span className="font-semibold">50+ Partners</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
+      {/* BVMW Official Representation Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-400/10 rounded-full blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <SectionReveal>
+            <div className="text-center mb-12">
+              <Badge className="mb-6 bg-amber-500/10 text-amber-700 border-amber-300 text-sm px-4 py-2">
+                <Building2 className="h-4 w-4 mr-2 inline" />
+                {t("bvmw_badge") || "Représentation Officielle"}
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                {t("bvmw_title") || "BVMW - Bundesverband mittelständische Wirtschaft"}
+              </h2>
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto mb-4 font-semibold">
+                {t("bvmw_subtitle") || "Accès à plus de 900 000 entreprises allemandes et internationales"}
+              </p>
+              <p className="text-lg text-slate-600 max-w-4xl mx-auto">
+                {t("bvmw_description") || "InvestInHuman Academy est la représentation officielle du BVMW en Tunisie – le plus grand réseau de PME allemandes."}
+              </p>
+            </div>
+          </SectionReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <SectionReveal delay={0.1}>
+              <Card className="text-center border-2 border-slate-200 hover:border-amber-400 transition-all duration-300 hover:shadow-xl transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="mx-auto w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                    <Building2 className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-slate-900">
+                    {t("bvmw_network_size") || "900 000+"}
+                  </CardTitle>
+                  <CardDescription className="text-lg font-semibold text-slate-700">
+                    {t("bvmw_network_global") || "Entreprises"}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">
+                    {t("bvmw_benefit_1") || "Accès direct aux PME allemandes"}
+                  </p>
+                </CardContent>
+              </Card>
+            </SectionReveal>
+
+            <SectionReveal delay={0.2}>
+              <Card className="text-center border-2 border-slate-200 hover:border-amber-400 transition-all duration-300 hover:shadow-xl transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="mx-auto w-20 h-20 bg-gradient-to-br from-slate-600 to-slate-700 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                    <Globe className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-slate-900">
+                    {t("bvmw_network_global") || "Réseau mondial"}
+                  </CardTitle>
+                  <CardDescription className="text-lg font-semibold text-slate-700">
+                    International
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">
+                    {t("bvmw_benefit_2") || "Connexions commerciales internationales"}
+                  </p>
+                </CardContent>
+              </Card>
+            </SectionReveal>
+
+            <SectionReveal delay={0.3}>
+              <Card className="text-center border-2 border-slate-200 hover:border-amber-400 transition-all duration-300 hover:shadow-xl transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="mx-auto w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                    <Handshake className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-slate-900">
+                    Tunisie 🇹🇳 🇩🇪 Allemagne
+                  </CardTitle>
+                  <CardDescription className="text-lg font-semibold text-slate-700">
+                    Coopération
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600">
+                    {t("bvmw_benefit_3") || "Coopération économique & culturelle"}
+                  </p>
+                </CardContent>
+              </Card>
+            </SectionReveal>
+          </div>
+
+          <SectionReveal delay={0.4}>
+            <div className="text-center">
+              <Link href="/bvmw">
+                <Button size="lg" className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <Building2 className="h-5 w-5 mr-2" />
+                  {t("bvmw_cta") || "En savoir plus sur le BVMW"}
+                </Button>
+              </Link>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
       {/* Overview of All Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,17 +325,17 @@ export default function HomePage() {
               </Card>
             </SectionReveal>
 
-            {/* Coaching */}
+            {/* Career Center International */}
             <SectionReveal delay={0.3}>
               <Card className="text-center border-2 hover:border-amber-500 transition-all duration-300 hover:shadow-xl transform hover:scale-105 group">
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-200 transition-all group-hover:scale-110">
                     <Heart className="h-8 w-8 text-amber-600" />
                   </div>
-                  <CardTitle className="text-xl group-hover:text-amber-600 transition-colors">{t("service_coaching_title") || "Coaching"}</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-amber-600 transition-colors">{t("career_center_title") || "Career Center International"}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">{t("service_coaching_desc") || "Personal development, leadership, and soft skills coaching"}</p>
+                  <p className="text-gray-600 mb-4">{t("service_coaching_desc") || "Personal development, orientation, soft skills, and leadership"}</p>
                   <Link href="/coaching">
                     <Button variant="outline" className="border-amber-500 text-amber-700 hover:bg-amber-50">
                       {t("learn_more") || "Learn More"}

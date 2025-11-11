@@ -98,13 +98,13 @@ export default function CoachingPage() {
             {t("coaching_badge") || "Personal Development"}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-            {t("coaching_hero_title") || "Coaching & Personal Development"}
+            {t("career_center_title") || "Career Center International"}
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto drop-shadow-md">
-            {t("coaching_hero_subtitle") || "Reveal your potential and achieve success in a global context"}
+            {t("career_center_subtitle") || "Développement personnel et professionnel pour réussir à l'international"}
           </p>
           <p className="text-lg text-white/80 mb-12 max-w-4xl mx-auto">
-            {t("coaching_hero_description") || "InvestInHuman coaching helps each person build confidence, motivation, and success on the international stage"}
+            {t("career_center_description") || "Nous accompagnons les individus dans leur développement personnel et professionnel : orientation, soft skills, confiance, communication et leadership."}
           </p>
           <Button
             size="lg"

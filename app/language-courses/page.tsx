@@ -204,13 +204,13 @@ ${t("lang_contact_message_thanks") || "Thank you!"}`;
             {t("lang_badge") || "International Language Training"}
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-            {t("lang_hero_title") || "International Language Courses"}
+            {t("lang_hero_title") || "Language & Intercultural Training"}
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto drop-shadow-md">
-            {t("lang_hero_subtitle") || "Languages open the doors to the world"}
+            {t("lang_hero_subtitle") || "Languages and intercultural skills open the doors to the world"}
           </p>
           <p className="text-lg text-white/80 mb-12 max-w-4xl mx-auto">
-            {t("lang_hero_description") || "Our courses combine practical learning, immersion, and real communication"}
+            {t("lang_hero_description") || "Our programs combine language learning with intercultural communication and international management training"}
           </p>
           <Button
             size="lg"
@@ -468,8 +468,98 @@ ${t("lang_contact_message_thanks") || "Thank you!"}`;
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Intercultural Communication & International Management Section */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionReveal>
+            <div className="text-center mb-12">
+              <Badge className="mb-6 bg-blue-100 text-blue-700 border-blue-300">
+                <Globe className="h-4 w-4 mr-2 inline" />
+                Beyond Language
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                {t("intercultural_section_title") || "Intercultural Communication & International Management"}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                {t("intercultural_subtitle") || "Understand and master cultural differences for better international cooperation"}
+              </p>
+            </div>
+          </SectionReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <SectionReveal delay={0.1}>
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-black">Why Intercultural Skills Matter</h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  In today's globalized world, language proficiency alone isn't enough. Our intercultural communication training helps you navigate cultural differences and build successful international relationships.
+                </p>
+                <ul className="space-y-4">
+                  {[
+                    "Intercultural communication and diplomacy",
+                    "Leadership in diverse cultural environments",
+                    "International management and cultural intelligence",
+                    "Cooperation between institutions and NGOs",
+                    "Cross-cultural negotiation skills",
+                    "Global business etiquette"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.2}>
+              <div className="grid grid-cols-2 gap-6">
+                <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-lg">
+                  <CardHeader>
+                    <Users className="h-10 w-10 text-blue-600 mb-2" />
+                    <CardTitle className="text-lg">Cultural Awareness</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-600">Understand and respect diverse cultural perspectives</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-lg">
+                  <CardHeader>
+                    <Globe className="h-10 w-10 text-blue-600 mb-2" />
+                    <CardTitle className="text-lg">Global Mindset</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-600">Develop international business acumen</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-lg">
+                  <CardHeader>
+                    <BookOpen className="h-10 w-10 text-blue-600 mb-2" />
+                    <CardTitle className="text-lg">Communication</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-600">Master cross-cultural communication strategies</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-lg">
+                  <CardHeader>
+                    <Award className="h-10 w-10 text-blue-600 mb-2" />
+                    <CardTitle className="text-lg">Leadership</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-gray-600">Lead diverse international teams effectively</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </SectionReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SectionReveal>
             <h2 className="text-3xl font-bold text-black mb-6">

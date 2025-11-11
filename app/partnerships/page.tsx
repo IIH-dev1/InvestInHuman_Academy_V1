@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -220,6 +221,90 @@ export default function PartnershipsPage() {
               </SectionReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* BVMW Partnership Highlight */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <SectionReveal>
+            <div className="text-center mb-12">
+              <Badge className="mb-6 bg-blue-100 text-blue-700 border-blue-300 text-sm px-4 py-2 inline-flex items-center">
+                <Building2 className="h-4 w-4 mr-2" />
+                Official BVMW Representative in Tunisia
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                Access 900,000+ Companies Through BVMW
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+                As the official representation of <strong>BVMW - Bundesverband mittelständische Wirtschaft</strong> (German Federation of SMEs) in Tunisia, we provide direct access to Germany's largest business network.
+              </p>
+            </div>
+          </SectionReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <SectionReveal delay={0.1}>
+              <Card className="text-center border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-white">
+                <CardHeader>
+                  <div className="mx-auto w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mb-4">
+                    <Building2 className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-3xl font-bold text-blue-700 mb-2">
+                    900,000+
+                  </CardTitle>
+                  <CardDescription className="text-lg font-semibold">
+                    German & International Companies
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </SectionReveal>
+
+            <SectionReveal delay={0.2}>
+              <Card className="text-center border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-white">
+                <CardHeader>
+                  <div className="mx-auto w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                    <Globe className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-indigo-700 mb-2">
+                    Global Network
+                  </CardTitle>
+                  <CardDescription className="text-lg font-semibold">
+                    International Business Connections
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </SectionReveal>
+
+            <SectionReveal delay={0.3}>
+              <Card className="text-center border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-white">
+                <CardHeader>
+                  <div className="mx-auto w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mb-4">
+                    <Handshake className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-blue-700 mb-2">
+                    🇹🇳 🇩🇪 Partnership
+                  </CardTitle>
+                  <CardDescription className="text-lg font-semibold">
+                    Tunisia-Germany Cooperation
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </SectionReveal>
+          </div>
+
+          <SectionReveal delay={0.4}>
+            <div className="text-center">
+              <Link href="/bvmw">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <Building2 className="h-5 w-5 mr-2" />
+                  Learn More About BVMW Partnership
+                </Button>
+              </Link>
+            </div>
+          </SectionReveal>
         </div>
       </section>
 
