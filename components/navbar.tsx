@@ -176,7 +176,7 @@ export default function Navbar() {
                 className={`transition-all duration-300 ${isScrolled ? "bg-amber-500 hover:bg-amber-600 text-white" : "bg-amber-500/90 hover:bg-amber-500 text-white backdrop-blur-sm"} whitespace-nowrap px-4`}
                 onClick={() => setIsContactModalOpen(true)}
               >
-                Contact Us
+                {t("nav_contact_us")}
               </Button>
             ) : null}
           </div>
@@ -252,7 +252,7 @@ export default function Navbar() {
                 className={`transition-all duration-300 ${isScrolled ? "bg-amber-500 hover:bg-amber-600 text-white" : "bg-amber-500/90 hover:bg-amber-500 text-white backdrop-blur-sm"} whitespace-nowrap px-3`}
                 onClick={() => setIsContactModalOpen(true)}
               >
-                Contact
+                {t("nav_contact_us")}
               </Button>
             ) : null}
           </div>

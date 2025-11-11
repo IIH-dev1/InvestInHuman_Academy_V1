@@ -1,7 +1,7 @@
 const seminarsTranslations = {
   DE: {
     // Common seminar terms
-    seminars_title: "Unsere Seminare",
+    seminars_title: "Interkulturelle Schulung",
     seminars_subtitle: "Professionelle Weiterbildung für interkulturelle Kompetenz und internationale Geschäftsetikette",
     seminars_all: "Alle Seminare",
     seminars_for_organizations: "Für Unternehmen",
@@ -12,7 +12,7 @@ const seminarsTranslations = {
     seminars_registered: "Erfolgreich angemeldet für",
     seminars_available_dates: "Verfügbare Termine",
     seminars_not_found: "Seminar nicht gefunden",
-    seminars_back: "Zurück zu Seminaren",
+    seminars_back: "Zurück zur interkulturellen Schulung",
     seminars_price: "Preis",
     seminars_price_on_request: "Preis auf Anfrage",
     seminars_duration: "Dauer",
@@ -96,7 +96,7 @@ const seminarsTranslations = {
   },
   EN: {
     // Common seminar terms
-    seminars_title: "Our Seminars",
+    seminars_title: "Intercultural Training",
     seminars_subtitle: "Professional development for intercultural competence and international business etiquette",
     seminars_all: "All Seminars",
     seminars_for_organizations: "For Organizations",
@@ -107,7 +107,7 @@ const seminarsTranslations = {
     seminars_registered: "Successfully registered for",
     seminars_available_dates: "Available Dates",
     seminars_not_found: "Seminar not found",
-    seminars_back: "Back to Seminars",
+    seminars_back: "Back to Intercultural Training",
     seminars_price: "Price",
     seminars_price_on_request: "Price on Request",
     seminars_duration: "Duration",
@@ -191,7 +191,7 @@ const seminarsTranslations = {
   },
   FR: {
     // Common seminar terms
-    seminars_title: "Nos Séminaires",
+    seminars_title: "Formation Interculturelle",
     seminars_subtitle: "Développement professionnel pour la compétence interculturelle et l'étiquette commerciale internationale",
     seminars_all: "Tous les Séminaires",
     seminars_for_organizations: "Pour les Organisations",
@@ -202,7 +202,7 @@ const seminarsTranslations = {
     seminars_registered: "Inscription réussie pour",
     seminars_available_dates: "Dates Disponibles",
     seminars_not_found: "Séminaire non trouvé",
-    seminars_back: "Retour aux Séminaires",
+    seminars_back: "Retour à la formation interculturelle",
     seminars_price: "Prix",
     seminars_price_on_request: "Prix sur Demande",
     seminars_duration: "Durée",
@@ -286,7 +286,7 @@ const seminarsTranslations = {
   },
   AR: {
     // Common seminar terms
-    seminars_title: "ندواتنا",
+    seminars_title: "التدريب الثقافي",
     seminars_subtitle: "التطوير المهني للكفاءة بين الثقافات وآداب الأعمال الدولية",
     seminars_all: "جميع الندوات",
     seminars_for_organizations: "للمنظمات",
@@ -297,7 +297,7 @@ const seminarsTranslations = {
     seminars_registered: "تم التسجيل بنجاح في",
     seminars_available_dates: "التواريخ المتاحة",
     seminars_not_found: "الندوة غير موجودة",
-    seminars_back: "العودة إلى الندوات",
+    seminars_back: "العودة إلى التدريب الثقافي",
     seminars_price: "السعر",
     seminars_price_on_request: "السعر عند الطلب",
     seminars_duration: "المدة",

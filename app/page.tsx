@@ -69,6 +69,19 @@ export default function HomePage() {
           <div className="absolute bottom-40 right-1/4 w-48 h-48 bg-amber-300/10 rounded-full blur-2xl animate-pulse delay-300"></div>
         </div>
 
+        {/* Animated Logo Background */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-20">
+          <div className="relative w-[600px] h-[600px]">
+            <Image
+              src="/logo-heroSection.png"
+              alt="Invest In Human Academy"
+              fill
+              className="object-contain animate-pulse-slow drop-shadow-2xl"
+              priority
+            />
+          </div>
+        </div>
+
         {/* Main content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center space-y-8">
@@ -151,13 +164,6 @@ export default function HomePage() {
                 <span className="font-semibold">50+ Partners</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2">
-            <div className="w-1.5 h-2 bg-white/70 rounded-full"></div>
           </div>
         </div>
       </section>
