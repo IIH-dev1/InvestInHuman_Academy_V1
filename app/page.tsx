@@ -180,6 +180,18 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SectionReveal>
             <div className="text-center mb-12">
+              <div className="flex justify-center mb-8">
+                <div className="bg-white p-6 rounded-2xl shadow-xl">
+                  <Image
+                    src="/logo-bvmw.jpg"
+                    alt="BVMW Logo"
+                    width={350}
+                    height={140}
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
               <Badge className="mb-6 bg-amber-500/10 text-amber-700 border-amber-300 text-sm px-4 py-2">
                 <Building2 className="h-4 w-4 mr-2 inline" />
                 {t("bvmw_badge") || "Représentation Officielle"}

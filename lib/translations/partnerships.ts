@@ -62,6 +62,16 @@ export const partnershipsTranslations = {
     partnerships_current_partners: "Nos partenaires actuels",
     partnerships_partner_since: "Partenaire depuis",
 
+    // BVMW Section
+    partnerships_bvmw_badge: "Offizieller BVMW-Vertreter in Tunesien",
+    partnerships_bvmw_title: "Zugang zu über 900.000 Unternehmen durch BVMW",
+    partnerships_bvmw_desc: "Als offizielle Vertretung des BVMW - Bundesverband mittelständische Wirtschaft (Deutscher Mittelstandsverband) in Tunesien bieten wir direkten Zugang zu Deutschlands größtem Geschäftsnetzwerk.",
+    partnerships_bvmw_stat1: "Deutsche & internationale Unternehmen",
+    partnerships_bvmw_stat2_title: "Globales Netzwerk",
+    partnerships_bvmw_stat2: "Internationale Geschäftsverbindungen",
+    partnerships_bvmw_stat3: "Tunesien-Deutschland Zusammenarbeit",
+    partnerships_bvmw_cta: "Mehr über BVMW-Partnerschaft erfahren",
+
     // Contact Modal
     partnerships_contact_subject: "Partnerschaftsanfrage",
     partnerships_contact_message: `Sehr geehrtes Invest In Human Academy Team,
@@ -140,6 +150,16 @@ Vielen Dank für Ihre Zeit und Aufmerksamkeit.`,
     partnerships_benefit4_desc: "Dévouement et collaboration continue tout au long du partenariat",
     partnerships_current_partners: "Nos partenaires actuels",
     partnerships_partner_since: "Partenaire depuis",
+
+    // BVMW Section
+    partnerships_bvmw_badge: "Représentant officiel du BVMW en Tunisie",
+    partnerships_bvmw_title: "Accès à plus de 900 000 entreprises via le BVMW",
+    partnerships_bvmw_desc: "En tant que représentation officielle du BVMW - Bundesverband mittelständische Wirtschaft (Fédération allemande des PME) en Tunisie, nous offrons un accès direct au plus grand réseau d'affaires d'Allemagne.",
+    partnerships_bvmw_stat1: "Entreprises allemandes et internationales",
+    partnerships_bvmw_stat2_title: "Réseau mondial",
+    partnerships_bvmw_stat2: "Connexions commerciales internationales",
+    partnerships_bvmw_stat3: "Coopération Tunisie-Allemagne",
+    partnerships_bvmw_cta: "En savoir plus sur le partenariat BVMW",
 
     // Contact Modal
     partnerships_contact_subject: "Demande de partenariat",
@@ -220,6 +240,16 @@ Merci pour votre temps et votre considération.`,
     partnerships_current_partners: "Our Current Partners",
     partnerships_partner_since: "Partner Since",
 
+    // BVMW Section
+    partnerships_bvmw_badge: "Official BVMW Representative in Tunisia",
+    partnerships_bvmw_title: "Access 900,000+ Companies Through BVMW",
+    partnerships_bvmw_desc: "As the official representation of BVMW - Bundesverband mittelständische Wirtschaft (German Federation of SMEs) in Tunisia, we provide direct access to Germany's largest business network.",
+    partnerships_bvmw_stat1: "German & International Companies",
+    partnerships_bvmw_stat2_title: "Global Network",
+    partnerships_bvmw_stat2: "International Business Connections",
+    partnerships_bvmw_stat3: "Tunisia-Germany Cooperation",
+    partnerships_bvmw_cta: "Learn More About BVMW Partnership",
+
     // Contact Modal
     partnerships_contact_subject: "Partnership Inquiry",
     partnerships_contact_message: `Dear Invest In Human Academy Team,
@@ -298,6 +328,16 @@ Thank you for your time and consideration.`,
     partnerships_benefit4_desc: "دعم وتعاون مخصص طوال فترة الشراكة",
     partnerships_current_partners: "شركاؤنا الحاليون",
     partnerships_partner_since: "شريك منذ",
+
+    // BVMW Section
+    partnerships_bvmw_badge: "الممثل الرسمي لـ BVMW في تونس",
+    partnerships_bvmw_title: "الوصول إلى أكثر من 900,000 شركة من خلال BVMW",
+    partnerships_bvmw_desc: "باعتبارنا الممثل الرسمي لـ BVMW - الاتحاد الألماني للاقتصاد المتوسط (الاتحاد الألماني للشركات الصغيرة والمتوسطة) في تونس، نوفر وصولاً مباشرًا إلى أكبر شبكة أعمال في ألمانيا.",
+    partnerships_bvmw_stat1: "شركات ألمانية ودولية",
+    partnerships_bvmw_stat2_title: "شبكة عالمية",
+    partnerships_bvmw_stat2: "اتصالات تجارية دولية",
+    partnerships_bvmw_stat3: "التعاون بين تونس وألمانيا",
+    partnerships_bvmw_cta: "تعرف على المزيد حول شراكة BVMW",
 
     // Contact Modal
     partnerships_contact_subject: "استفسار عن الشراكة",

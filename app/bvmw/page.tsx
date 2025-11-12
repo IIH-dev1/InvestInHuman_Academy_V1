@@ -12,6 +12,7 @@ import { useTranslation } from "@/lib/useTranslation";
 import { useState } from "react";
 import { FlagTN, FlagDE } from "@/components/flag-icon";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BVMWPage() {
   const t = useTranslation();
@@ -117,9 +118,18 @@ export default function BVMWPage() {
             <Building2 className="h-4 w-4 mr-2" />
             {t("bvmw_badge") || "Représentation Officielle"}
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-            BVMW
-          </h1>
+          <div className="flex justify-center mb-8">
+            <div className="bg-white p-6 rounded-2xl shadow-2xl">
+              <Image
+                src="/logo-bvmw.jpg"
+                alt="BVMW Logo"
+                width={300}
+                height={120}
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
           <h2 className="text-2xl md:text-3xl font-semibold text-white/95 mb-6 drop-shadow-md">
             {t("bvmw_title") || "Bundesverband mittelständische Wirtschaft"}
           </h2>
@@ -189,7 +199,17 @@ export default function BVMWPage() {
               <div className="bg-gradient-to-br from-amber-50 to-orange-100 p-8 rounded-2xl shadow-xl">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <Building2 className="h-20 w-20 text-amber-600 mx-auto mb-4" />
+                    <div className="flex justify-center mb-4">
+                      <div className="bg-white p-4 rounded-xl shadow-lg">
+                        <Image
+                          src="/logo-bvmw.jpg"
+                          alt="BVMW Logo"
+                          width={200}
+                          height={80}
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
                     <h4 className="text-3xl font-bold text-amber-700 mb-2">900,000+</h4>
                     <p className="text-lg text-slate-700 font-semibold">{t("bvmw_network_companies") || "Member Companies"}</p>
                   </div>
