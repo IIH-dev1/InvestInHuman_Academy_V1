@@ -12,10 +12,12 @@ import ContactModal from "@/components/contact-modal"
 import { SectionReveal } from "@/components/section-reveal"
 import { useTranslation } from "@/lib/useTranslation"
 import { getSeminars, Seminar } from "@/lib/seminar-utils"
+import { useSeminarTranslation } from "@/lib/useSeminarTranslation"
 import { useState, useEffect } from "react"
 
 export default function HomePage() {
   const t = useTranslation();
+  const { getSeminar } = useSeminarTranslation();
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [contactContext, setContactContext] = useState<'general' | 'partnership'>('general');
   const [seminars, setSeminars] = useState<Seminar[]>([]);
@@ -429,33 +431,36 @@ export default function HomePage() {
           </SectionReveal>
           {seminars.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {seminars.map((seminar, index) => (
-                <SectionReveal key={seminar.id} delay={0.1 + index * 0.1}>
-                  <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-amber-500 transform hover:scale-105 h-full flex flex-col">
-                    <CardHeader className="pb-4">
-                      <div className="flex items-start gap-3 mb-3">
-                        {seminar.category.includes('Companies') || seminar.category.includes('Organizations') ? (
-                          <Briefcase className="h-8 w-8 text-amber-500 flex-shrink-0 mt-1" />
-                        ) : (
-                          <Users className="h-8 w-8 text-amber-500 flex-shrink-0 mt-1" />
-                        )}
-                        <CardTitle className="text-lg leading-tight">{seminar.title || seminar.category}</CardTitle>
-                      </div>
-                      <CardDescription className="line-clamp-3 min-h-[60px]">{seminar.objectives || "Professional seminar program"}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4 mt-auto pt-4">
-                      <div className="mb-2">
-                        <span className="inline-block px-3 py-1 text-xs font-semibold bg-white border border-gray-300 rounded text-gray-700">
-                          {t("seminars_price_on_request") || "Prix sur demande"}
-                        </span>
-                      </div>
-                      <Link href={`/seminars/${seminar.id}`}>
-                        <Button variant="outline" className="w-full border-amber-500 text-amber-700 hover:bg-amber-50">{t("seminars_details") || "Voir les détails"}</Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                </SectionReveal>
-              ))}
+              {seminars.map((seminar, index) => {
+                const translatedSeminar = getSeminar(parseInt(seminar.id));
+                return (
+                  <SectionReveal key={seminar.id} delay={0.1 + index * 0.1}>
+                    <Card className="hover:shadow-xl transition-all duration-300 border-2 hover:border-amber-500 transform hover:scale-105 h-full flex flex-col">
+                      <CardHeader className="pb-4">
+                        <div className="flex items-start gap-3 mb-3">
+                          {seminar.category.includes('Companies') || seminar.category.includes('Organizations') ? (
+                            <Briefcase className="h-8 w-8 text-amber-500 flex-shrink-0 mt-1" />
+                          ) : (
+                            <Users className="h-8 w-8 text-amber-500 flex-shrink-0 mt-1" />
+                          )}
+                          <CardTitle className="text-lg leading-tight">{translatedSeminar?.title || seminar.title || seminar.category}</CardTitle>
+                        </div>
+                        <CardDescription className="line-clamp-3 min-h-[60px]">{translatedSeminar?.objectives || seminar.objectives || "Professional seminar program"}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4 mt-auto pt-4">
+                        <div className="mb-2">
+                          <span className="inline-block px-3 py-1 text-xs font-semibold bg-white border border-gray-300 rounded text-gray-700">
+                            {t("seminars_price_on_request") || "Prix sur demande"}
+                          </span>
+                        </div>
+                        <Link href={`/seminars/${seminar.id}`}>
+                          <Button variant="outline" className="w-full border-amber-500 text-amber-700 hover:bg-amber-50">{t("seminars_details") || "Voir les détails"}</Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </SectionReveal>
+                );
+              })}
             </div>
           ) : (
             <div className="text-center py-8"><p className="text-gray-500">{t("no_seminars") || "Seminars coming soon"}</p></div>
