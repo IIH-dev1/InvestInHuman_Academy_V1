@@ -70,10 +70,8 @@ export default function Navbar() {
   const navItems = [
     { href: "/about-us", label: t("nav_about_us") || "About Us" },
     { href: "/language-courses", label: t("nav_language_courses") || "Language Courses" },
-    { href: "/seminars", label: t("nav_seminars") || "Seminars" },
-    { href: "/coaching", label: t("career_center_title") || "Career Center" },
-    { href: "/aupair-volunteering", label: t("nav_mobility") || "Mobility" },
-    { href: "/studies-abroad", label: t("nav_studies") || "Studies Abroad" },
+    { href: "/career-center", label: t("nav_career_center") || "International Career Center" },
+    { href: "/mobility", label: t("nav_mobility") || "Mobility" },
     { href: "/bvmw", label: "BVMW" },
     { href: "/partnerships", label: t("nav_partnerships") || "Partnerships" },
   ]
@@ -110,13 +108,13 @@ export default function Navbar() {
 
           {/* Centered Desktop Navigation */}
           <div className="hidden xl:flex flex-1 justify-center px-2">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={`transition-all duration-300 transform hover:scale-105 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"
-                    } font-semibold text-[15px] whitespace-nowrap px-1`}
+                    } font-bold text-base tracking-wide whitespace-nowrap px-2`}
                 >
                   {item.label}
                 </Link>
@@ -127,145 +125,38 @@ export default function Navbar() {
           {/* Right side actions */}
           <div className="hidden xl:flex items-center gap-2.5 flex-shrink-0">
             <LanguageSwitcher />
-            {user ? (
-              user.userType === "admin" ? (
-                <Link href="/admin/dashboard">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className={`border-amber-500 text-amber-500 hover:bg-amber-50 transition-all duration-300 ${isScrolled ? "bg-white" : "bg-white/80"} whitespace-nowrap`}
-                  >
-                    {t("nav_dashboard")}
-                  </Button>
-                </Link>
-              ) : (
-                <div className="relative">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className={`border-amber-500 text-amber-500 hover:bg-amber-50 flex items-center gap-1 transition-all duration-300 ${isScrolled ? "bg-white" : "bg-white/80"} whitespace-nowrap`}
-                    onClick={() => setProfileDropdownOpen((open) => !open)}
-                    aria-haspopup="true"
-                    aria-expanded={profileDropdownOpen}
-                  >
-                    {t("nav_profile")}
-                    <svg className={`h-4 w-4 transition-transform ${profileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-                  </Button>
-                  {profileDropdownOpen && (
-                    <div
-                      ref={dropdownRef}
-                      className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50"
-                    >
-                      <Link href="/edit-profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">{t("nav_edit_profile")}</Link>
-                      <button
-                        className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setUser(null);
-                          localStorage.removeItem("token");
-                          localStorage.removeItem("user");
-                          window.location.href = "/";
-                        }}
-                      >{t("nav_sign_out")}</button>
-                    </div>
-                  )}
-                </div>
-              )
-            ) : null}
-            {/* Contact Button - Commented out */}
-            {/* {!user || user.userType !== "admin" ? (
-              <Button
-                size="sm"
-                className={`transition-all duration-300 ${isScrolled ? "bg-amber-500 hover:bg-amber-600 text-white" : "bg-amber-500/90 hover:bg-amber-500 text-white backdrop-blur-sm"} whitespace-nowrap px-4`}
-                onClick={() => setIsContactModalOpen(true)}
-              >
-                {t("nav_contact_us")}
-              </Button>
-            ) : null} */}
           </div>
 
           {/* Large screen navigation with reduced items */}
           <div className="hidden lg:flex xl:hidden items-center gap-3 ml-auto flex-shrink-0">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Link
                 href="/about-us"
-                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-semibold text-[15px] whitespace-nowrap`}
+                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-bold text-base tracking-wide whitespace-nowrap`}
               >
                 {t("nav_about_us")}
               </Link>
               <Link
                 href="/language-courses"
-                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-semibold text-[15px] whitespace-nowrap`}
+                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-bold text-base tracking-wide whitespace-nowrap`}
               >
                 {t("nav_language_courses")}
               </Link>
               <Link
                 href="/seminars"
-                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-semibold text-[15px] whitespace-nowrap`}
+                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-bold text-base tracking-wide whitespace-nowrap`}
               >
                 {t("nav_seminars")}
               </Link>
               <Link
                 href="/bvmw"
-                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-semibold text-[15px] whitespace-nowrap`}
+                className={`transition-colors duration-300 ${isScrolled ? "text-black hover:text-amber-500" : "text-white hover:text-amber-300"} font-bold text-base tracking-wide whitespace-nowrap`}
               >
                 BVMW
               </Link>
             </div>
             <div className="flex items-center gap-2">
               <LanguageSwitcher />
-              {user ? (
-                user.userType === "admin" ? (
-                  <Link href="/admin/dashboard">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className={`border-amber-500 text-amber-500 hover:bg-amber-50 transition-all duration-300 ${isScrolled ? "bg-white" : "bg-white/80"}`}
-                    >
-                      {t("nav_dashboard")}
-                    </Button>
-                  </Link>
-                ) : (
-                  <div className="relative">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className={`border-amber-500 text-amber-500 hover:bg-amber-50 transition-all duration-300 ${isScrolled ? "bg-white" : "bg-white/80"}`}
-                      onClick={() => setProfileDropdownOpen((open) => !open)}
-                    >
-                      {t("nav_profile")}
-                    </Button>
-                    {profileDropdownOpen && (
-                      <div
-                        ref={dropdownRef}
-                        className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-50"
-                      >
-                        <Link href="/edit-profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">{t("nav_edit_profile")}</Link>
-                        <button
-                          className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setUser(null);
-                            localStorage.removeItem("token");
-                            localStorage.removeItem("user");
-                            window.location.href = "/";
-                          }}
-                        >{t("nav_sign_out")}</button>
-                      </div>
-                    )}
-                  </div>
-                )
-              ) : null}
-              {/* Contact Button - Commented out */}
-              {/* {!user || user.userType !== "admin" ? (
-                <Button
-                  size="sm"
-                  className={`transition-all duration-300 ${isScrolled ? "bg-amber-500 hover:bg-amber-600 text-white" : "bg-amber-500/90 hover:bg-amber-500 text-white backdrop-blur-sm"} whitespace-nowrap px-3`}
-                  onClick={() => setIsContactModalOpen(true)}
-                >
-                  {t("nav_contact_us")}
-                </Button>
-              ) : null} */}
             </div>
           </div>
 
@@ -282,71 +173,19 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md border-t">
+            <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-white/95 backdrop-blur-md border-t">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-black hover:text-amber-500 transition-colors duration-200 text-lg font-bold"
+                  className="block px-4 py-3 text-black hover:text-amber-500 hover:bg-amber-50 transition-all duration-200 text-xl font-bold tracking-wide rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              {/* Only show Dashboard for admin users */}
-              {user && user.userType === "admin" && (
-                <Link
-                  href="/admin/dashboard"
-                  className="block px-3 py-2 text-black hover:text-amber-500 transition-colors duration-200 text-base font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t("nav_dashboard")}
-                </Link>
-              )}
-              <div className="px-3 py-3 flex flex-col gap-3 border-t border-gray-200 mt-2 pt-3">
+              <div className="px-4 py-3 flex flex-col gap-3 border-t border-gray-200 mt-2 pt-3">
                 <LanguageSwitcher />
-                {user ? (
-                  user.userType === "admin" ? (
-                    <span className="text-sm font-medium text-gray-700">{t("nav_logged_in_as")} {user.username || user.fullname || user.email}</span>
-                  ) : (
-                    <>
-                      <Link href="/edit-profile" onClick={() => setIsMenuOpen(false)}>
-                        <Button
-                          variant="outline"
-                          className="w-full border-amber-500 text-amber-500 hover:bg-amber-50"
-                        >
-                          {t("nav_edit_profile")}
-                        </Button>
-                      </Link>
-                      <Button
-                        variant="outline"
-                        className="w-full border-red-500 text-red-600 hover:bg-red-50"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setUser(null);
-                          localStorage.removeItem("token");
-                          localStorage.removeItem("user");
-                          setIsMenuOpen(false);
-                          window.location.href = "/";
-                        }}
-                      >
-                        {t("nav_sign_out")}
-                      </Button>
-                    </>
-                  )
-                ) : null}
-                {/* Contact Button - Commented out */}
-                {/* {!user || user.userType !== "admin" ? (
-                  <Button
-                    className="w-full bg-amber-500 hover:bg-amber-600 text-white"
-                    onClick={() => {
-                      setIsMenuOpen(false)
-                      setIsContactModalOpen(true)
-                    }}
-                  >
-                    {t("nav_contact_us")}
-                  </Button>
-                ) : null} */}
               </div>
             </div>
           </div>

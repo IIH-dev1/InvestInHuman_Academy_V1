@@ -107,17 +107,11 @@ export function Footer() {
               <Link href="/language-courses" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
                 {t("nav_language_courses") || "Language Courses"}
               </Link>
-              <Link href="/seminars" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
-                {t("nav_seminars") || "Seminars"}
+              <Link href="/career-center" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
+                {t("nav_career_center") || "Coaching"}
               </Link>
-              <Link href="/coaching" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
-                {t("nav_coaching") || "Coaching"}
-              </Link>
-              <Link href="/aupair-volunteering" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
+              <Link href="/mobility" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
                 {t("nav_mobility") || "Mobility"}
-              </Link>
-              <Link href="/studies-abroad" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
-                {t("nav_studies") || "Studies Abroad"}
               </Link>
               <Link href="/partnerships" className="block text-gray-300 hover:text-amber-400 transition-all duration-300 transform hover:translate-x-2 font-medium">
                 {t("nav_partnerships") || "Partnerships"}

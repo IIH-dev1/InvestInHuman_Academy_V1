@@ -6,6 +6,8 @@ import contactTranslations from './contact';
 import aboutUsTranslations from './aboutUs';
 import seminarsTranslations from './seminars';
 import generalTranslations from './general';
+import careerCenterTranslations from './careerCenter';
+import mobilityTranslations from './mobility';
 
 // Merge all translation objects
 export const mergeTranslations = (...translationObjects: any[]) => {
@@ -29,7 +31,9 @@ export const pageTranslations = mergeTranslations(
   contactTranslations,
   aboutUsTranslations,
   seminarsTranslations,
-  generalTranslations
+  generalTranslations,
+  careerCenterTranslations,
+  mobilityTranslations
 );
 
 // Export individual translation files
@@ -41,5 +45,7 @@ export {
   contactTranslations,
   aboutUsTranslations,
   seminarsTranslations,
-  generalTranslations
+  generalTranslations,
+  careerCenterTranslations,
+  mobilityTranslations
 };
