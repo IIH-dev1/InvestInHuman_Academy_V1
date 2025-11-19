@@ -81,11 +81,6 @@ export default function MobilityPage() {
       description: t("benefit_visa_desc") || "Complete support with visa applications, residence permits, and legal matters.",
     },
     {
-      icon: Network,
-      title: t("benefit_partners_title") || "Strong Partners",
-      description: t("benefit_partners_desc") || "Cooperation with established organizations like Caritas, DRK, Diakonie, and AWO.",
-    },
-    {
       icon: Award,
       title: t("benefit_development_title") || "Personal Development",
       description: t("benefit_development_desc") || "Gain valuable experiences and develop personally and professionally.",
